@@ -31,7 +31,7 @@ class MyApplication extends StatelessWidget {
         ),
         appBar: AppBar(
           title: const Text(
-            'Medica Insight',
+            'First Application',
             style: TextStyle(
               color: Color.fromRGBO(206, 205, 205, 0.965),
               fontSize: 35,
@@ -46,7 +46,7 @@ class MyApplication extends StatelessWidget {
           children: [
             SizedBox(height: 100),
             Text(
-              "welcome to Medica Insight",
+              "welcome to my first application",
               style: TextStyle(
                 color: Color.fromRGBO(20, 20, 20, 0.965),
                 fontSize: 30,
@@ -55,7 +55,7 @@ class MyApplication extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              "A website that uses AI to provide information on medical conditions, treatments, medications, and preventive care.",
+              "This is the first app i created using flutter.",
               style: TextStyle(
                 color: Color.fromRGBO(20, 20, 20, 0.965),
                 fontSize: 18,
@@ -63,7 +63,7 @@ class MyApplication extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              "Begin your Medical journey with Medica Insight.",
+              "Thanks for visiting.",
               style: TextStyle(
                 color: Color.fromRGBO(20, 20, 20, 0.965),
                 fontSize: 18,
