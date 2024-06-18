@@ -65,7 +65,7 @@ class MyApplication extends StatelessWidget {
                     height: 200,
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Colors.green,
+                      color: Colors.blue,
                     ),
                   ),
                 ],
