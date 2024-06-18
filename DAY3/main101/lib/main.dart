@@ -40,8 +40,46 @@ class MyApplication extends StatelessWidget {
             )
           ],
         ),
-        body: const Center(
-          child: Text("Hello, world!"),
+        body: ListView(
+          scrollDirection: Axis.horizontal,
+          children: [
+            Container(
+              width: 200,
+              color: Colors.red,
+            ),
+            Container(
+              width: 200,
+              color: Colors.green,
+            ),
+            Container(
+              width: 200,
+              color: Colors.blue,
+            ),
+            Container(
+              width: 200,
+              color: Colors.grey,
+            ),
+            Container(
+              width: 200,
+              color: Colors.green,
+            ),
+            Container(
+              width: 200,
+              color: Colors.black,
+            ),
+            Container(
+              width: 200,
+              color: Colors.purple,
+            ),
+            Container(
+              width: 200,
+              color: Colors.green,
+            ),
+            Container(
+              width: 200,
+              color: Colors.blue,
+            ),
+          ],
         ),
       ),
     );
