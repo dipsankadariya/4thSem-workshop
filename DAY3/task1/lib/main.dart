@@ -1,228 +1,172 @@
+import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApplication());
+  runApp(myApp());
 }
 
-class MyApplication extends StatelessWidget {
-  const MyApplication({super.key});
+class myApp extends StatelessWidget {
+  const myApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Day3",
+      title: "day3",
       home: Scaffold(
         appBar: AppBar(
           title: const Text(
-            "Task1",
-            style: TextStyle(color: Colors.white),
+            "Task1 ",
+            style: TextStyle(
+                color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
           ),
           centerTitle: true,
-          backgroundColor: Colors.blueAccent,
+          backgroundColor: Colors.lightBlueAccent,
           leading: const Icon(
             Icons.menu,
             color: Colors.white,
           ),
           actions: const [
             Padding(
-              padding: EdgeInsets.only(right: 10.0),
-              child: Icon(
-                Icons.person,
-                color: Colors.white,
-              ),
+              padding: EdgeInsets.only(right: 20.0),
+              child: Icon(Icons.person, color: Colors.white),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 10.0, right: 10.0),
-              child: Icon(Icons.search),
+              padding: EdgeInsets.only(right: 20.0),
+              child: Icon(Icons.search, color: Colors.white),
             ),
           ],
         ),
-        body: ListView(
-          scrollDirection: Axis.horizontal,
+        body: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Column(
+            SizedBox(
+              height: 280,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
                 children: [
-                  Container(
-                    width: 200,
-                    height: 200,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.red,
-                    ),
+                  Column(
+                    children: [
+                      Container(
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Icons.circle),
+                          iconSize: 200,
+                          color: Colors.blue,
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.circle),
+                          iconSize: 200,
+                          color: Colors.purple,
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.circle),
+                          iconSize: 200,
+                          color: Colors.orange,
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(35),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.circle),
+                          iconSize: 200,
+                          color: Colors.red,
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(35),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.circle),
+                          iconSize: 200,
+                          color: Colors.yellowAccent,
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(35),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Column(
+            Expanded(
+              child: ListView(
+                scrollDirection: Axis.vertical,
                 children: [
                   Container(
-                    width: 200,
-                    height: 200,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.blue,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Column(
-                children: [
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        color: Colors.red,
+                        shape: BoxShape.rectangle,
+                      )),
                   Container(
-                    width: 200,
-                    height: 200,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.blue,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Column(
-                children: [
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        color: Colors.green,
+                        shape: BoxShape.rectangle,
+                      )),
                   Container(
-                    width: 200,
-                    height: 200,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.grey,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Column(
-                children: [
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        shape: BoxShape.rectangle,
+                      )),
                   Container(
-                    width: 200,
-                    height: 200,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.green,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Column(
-                children: [
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        color: Colors.green,
+                        shape: BoxShape.rectangle,
+                      )),
                   Container(
-                    width: 200,
-                    height: 200,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.black,
-                    ),
-                  ),
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        color: Colors.grey,
+                        shape: BoxShape.rectangle,
+                      )),
                 ],
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Column(
-                children: [
-                  Container(
-                    width: 200,
-                    height: 200,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.purple,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Column(
-                children: [
-                  Container(
-                    width: 200,
-                    height: 200,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.green,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Column(
-                children: [
-                  Container(
-                    width: 200,
-                    height: 200,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.blue,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Column(
-                children: [
-                  Container(
-                    width: 200,
-                    height: 200,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.blue,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Column(
-                children: [
-                  Container(
-                    width: 200,
-                    height: 200,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.blue,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Column(
-                children: [
-                  Container(
-                    width: 200,
-                    height: 200,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.blue,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            )
           ],
         ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       ),
     );
   }
