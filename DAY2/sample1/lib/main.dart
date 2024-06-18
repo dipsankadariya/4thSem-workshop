@@ -29,7 +29,7 @@ class MyApplication extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               Text(
                 "Welcome to HealthSphere",
                 style: TextStyle(
@@ -38,7 +38,7 @@ class MyApplication extends StatelessWidget {
                   color: Colors.blue[900], // Dark blue for headings
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               const Text(
                 "HealthSphere is your go-to application for quick access to essential medical information during emergencies and beyond. ",
                 style: TextStyle(
@@ -47,7 +47,7 @@ class MyApplication extends StatelessWidget {
                   color: Colors.black87, // Dark grey for body text
                 ),
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               const Text(
                 "Designed with simplicity and accessibility in mind, HealthSphere empowers users with straightforward yet comprehensive medical insights at their fingertips.",
                 style: TextStyle(
@@ -56,7 +56,7 @@ class MyApplication extends StatelessWidget {
                   color: Colors.black87, // Light grey for additional text
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Text(
                 "Key Features:",
                 style: TextStyle(
