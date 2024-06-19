@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(myApp());
@@ -26,6 +25,15 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePage extends State<HomePage> {
+  var photo = "assets/images/ticktack.png";
+
+  void showImage() {
+    setState(() {
+      photo = 'assets/images/${texts.text}';
+    });
+  }
+
+  TextEditingController texts = TextEditingController(text: "");
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,14 +45,37 @@ class _HomePage extends State<HomePage> {
         backgroundColor: Colors.amber,
         centerTitle: true,
       ),
-      body: Column(
-        children: [
-          Container(
-            height: 400,
-            width: 400,
-            child: Image.asset("assets/images/ticktack.png"),
-          ),
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              height: 400,
+              width: 400,
+              child: Image.asset(photo),
+            ),
+            SizedBox(height: 20),
+            Container(
+              width: 300,
+              child: TextField(
+                controller: texts,
+                decoration: InputDecoration(
+                  labelText: "Enter the image name",
+                  labelStyle: TextStyle(color: Colors.grey),
+                ),
+              ),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: showImage,
+              style: ElevatedButton.styleFrom(
+                minimumSize: Size(200, 50),
+                // Set the width and height here
+              ),
+              child: Text("Show Image"),
+            ),
+          ],
+        ),
       ),
     );
   }
